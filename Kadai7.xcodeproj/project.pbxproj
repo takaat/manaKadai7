@@ -11,6 +11,9 @@
 		BF3FCD61276EA50F00EBD7F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3FCD60276EA50F00EBD7F1 /* ContentView.swift */; };
 		BF3FCD63276EA51100EBD7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3FCD62276EA51100EBD7F1 /* Assets.xcassets */; };
 		BF3FCD66276EA51100EBD7F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3FCD65276EA51100EBD7F1 /* Preview Assets.xcassets */; };
+		BF4C68D0276F0A210031E225 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C68CF276F0A210031E225 /* NumberField.swift */; };
+		BF4C68D2276F0DFB0031E225 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C68D1276F0DFB0031E225 /* ItemView.swift */; };
+		BF4C68D4276F19660031E225 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C68D3276F19660031E225 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		BF3FCD60276EA50F00EBD7F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF3FCD62276EA51100EBD7F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF3FCD65276EA51100EBD7F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF4C68CF276F0A210031E225 /* NumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
+		BF4C68D1276F0DFB0031E225 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		BF4C68D3276F19660031E225 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				BF3FCD5E276EA50F00EBD7F1 /* Kadai7App.swift */,
 				BF3FCD60276EA50F00EBD7F1 /* ContentView.swift */,
+				BF4C68D1276F0DFB0031E225 /* ItemView.swift */,
+				BF4C68CF276F0A210031E225 /* NumberField.swift */,
+				BF4C68D3276F19660031E225 /* Item.swift */,
 				BF3FCD62276EA51100EBD7F1 /* Assets.xcassets */,
 				BF3FCD64276EA51100EBD7F1 /* Preview Content */,
 			);
@@ -77,6 +86,7 @@
 				BF3FCD57276EA50F00EBD7F1 /* Sources */,
 				BF3FCD58276EA50F00EBD7F1 /* Frameworks */,
 				BF3FCD59276EA50F00EBD7F1 /* Resources */,
+				BF3FCD6C276EAE3900EBD7F1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,13 +142,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF3FCD6C276EAE3900EBD7F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF3FCD57276EA50F00EBD7F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BF3FCD61276EA50F00EBD7F1 /* ContentView.swift in Sources */,
+				BF4C68D4276F19660031E225 /* Item.swift in Sources */,
 				BF3FCD5F276EA50F00EBD7F1 /* Kadai7App.swift in Sources */,
+				BF4C68D0276F0A210031E225 /* NumberField.swift in Sources */,
+				BF4C68D2276F0DFB0031E225 /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +310,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +340,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

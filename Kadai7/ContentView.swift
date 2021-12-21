@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            ItemView(item: .item1)
+            ItemView(color: .pink, calculation: +)
                 .tabItem({Text("Item1")})
 
-            ItemView(item: .item2)
+            ItemView(color: .green, calculation: -)
                 .tabItem({Text("Item2")})
         }
     }

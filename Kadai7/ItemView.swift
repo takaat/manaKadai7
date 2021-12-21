@@ -11,11 +11,12 @@ struct ItemView: View {
     @State private var topNumber: Int?
     @State private var bottomNumber: Int?
     @State private var answer: Int = 0
-    let item: Item
+    let color: Color
+    let calculation: (Int, Int) -> Int
 
     var body: some View {
         ZStack {
-            item.control.0
+            color
                 .ignoresSafeArea(edges: .top)
 
             VStack(spacing: 50) {
@@ -24,7 +25,7 @@ struct ItemView: View {
                 NumberField(number: $bottomNumber)
 
                 Button(action: {
-                    calculation()
+                    calculate()
                     closeKeyboard()
                 }, label: {Text("Button")})
 
@@ -34,10 +35,10 @@ struct ItemView: View {
         }
     }
 
-    private func calculation() {
+    private func calculate() {
         let topNumber = topNumber ?? 0
         let bottomNumber = bottomNumber ?? 0
-        answer = topNumber + (item.control.1 ? bottomNumber : -bottomNumber)
+        answer = calculation(topNumber, bottomNumber)
     }
 
     private func closeKeyboard() {
@@ -47,6 +48,6 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(item: .item1)
+        ItemView(color: .pink, calculation: +)
     }
 }
